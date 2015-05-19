@@ -33,10 +33,9 @@ DonutShop.prototype.render = function() {
     var td = document.createElement('td');
     var position = document.getElementById(this.loca);
     position.appendChild(td);
-
+    //calculates the number of donuts per day from the hrs above
     var dPerHr = this.donutsPerHour();
     totalPerDay += dPerHr;
-
     var perHr = document.createTextNode(dPerHr);
     td.appendChild(perHr);
   }
