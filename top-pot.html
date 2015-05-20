@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Top Pot Donut Model</title>
+    <script language="javascript" type="text/javascript" src="top-pot.js"></script>
   </head>
   <body>
     <section>
@@ -12,7 +13,7 @@
     </section>
     <section>
       <h1>Projections</h1>
-      <table>
+      <table id="donut-table">
         <tr>
           <th>Location</th>
           <th scope="col">7:00 AM</th>
@@ -29,22 +30,16 @@
           <th scope="col">6:00 PM</th>
           <th scope="col">Total</th>
         </tr>
-        <tr id="downtown">
-          <th scope="row" >Downtown</th>
-        </tr>
-        <tr id="cap-hill">
-          <th scope="row">Capitol Hill</th>
-        </tr>
-        <tr id="slu">
-          <th scope="row">South Lake Union</th>
-        </tr>
-        <tr id="wedgewood">
-          <th scope="row">Wedgewood</th>
-        </tr>
-        <tr id="ballard">
-          <th scope="row">Ballard</th>
-        </tr>
       </table>
+    </section>
+    <section>
+      <h1>New Location</h1>
+      <p>Want to add a new location to the table? Input data below</p>
+      <label>Location Name:<input id="location" type="text" placeholder="example: bellevue"></label>
+      <label>Minimum Customers Per Hour:<input id="min-cust" type="number" placeholder="#"></label>
+      <label>Maximum Customers Per Hour:<input id="max-cust" type="number" placeholder="#"></label>
+      <label>Average donuts purchased per customer:<input id="ave-purch" type="number" placeholder="#"></label>
+      <button id="submit-button">Submit</button>
     </section>
   </body>
   <script language="javascript" type="text/javascript" src="top-pot.js"></script>
