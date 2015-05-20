@@ -3,16 +3,19 @@
   <head>
     <title>Top Pot Donut Model</title>
     <script language="javascript" type="text/javascript" src="top-pot.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Fontdiner+Swanky' rel='stylesheet' type='text/css'>
   </head>
   <body>
     <section>
-      <h1>Description</h1>
+      <h1>Top Pot Donut Projects</h1>
+      <h2>Description</h2>
       <p>
         The table below projects the number of donuts needed per a given hour from 7:00 AM to 6:00 PM. These projections are for the franchises located in Downtown, Capitol Hill, South Lake Union, Wedgewood, and Ballard. A total is also given for the total number of donuts needed for the day.
       </p>
     </section>
     <section>
-      <h1>Projections</h1>
+      <h2>Projections</h2>
       <table id="donut-table">
         <tr>
           <th>Location</th>
@@ -33,12 +36,12 @@
       </table>
     </section>
     <section>
-      <h1>New Location</h1>
+      <h2>New Location</h2>
       <p>Want to add a new location to the table? Input data below</p>
-      <label>Location Name:<input id="location" type="text" placeholder="example: bellevue"></label>
-      <label>Minimum Customers Per Hour:<input id="min-cust" type="number" placeholder="#"></label>
-      <label>Maximum Customers Per Hour:<input id="max-cust" type="number" placeholder="#"></label>
-      <label>Average donuts purchased per customer:<input id="ave-purch" type="number" placeholder="#"></label>
+      <label>Location Name:<input class="input-header" id="location" type="text" placeholder="example: bellevue"></label>
+      <label>Minimum Customers Per Hour:<input class="input-header" id="min-cust" type="number" placeholder="#"></label>
+      <label>Maximum Customers Per Hour:<input class="input-header" id="max-cust" type="number" placeholder="#"></label>
+      <label>Average donuts purchased per customer:<input class="input-header" id="ave-purch" type="number" placeholder="#"></label>
       <button id="submit-button">Submit</button>
     </section>
   </body>

@@ -1,0 +1,55 @@
+body {
+  background-color: #E2F2C6; }
+
+h1 {
+  font-family: 'Fontdiner Swanky', cursive;
+  color: #91CCAD;
+  text-align: center;
+  font-size: 2.2em; }
+
+h2 {
+  text-align: center; }
+
+p {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+  width: 400px;}
+
+table {
+  margin-right: auto;
+  margin-left: auto; }
+
+tr:nth-child(even) {
+  background-color: #85DB18;
+  color: #041F3D; }
+
+tr:nth-child(odd) {
+  background-color: #041F3D;
+  color: #85DB18; }
+
+tr:hover {
+  background-color: #FFE11A;
+  color: #041F3D; }
+
+input{
+background-color: #FFE11A; }
+
+#submit-button {
+background-color: #91CCAD;
+color:#041F3D; }
+
+#submit-button:hover {
+  background-color:#041F3D;
+  color: #91CCAD; }
+
+.input-header{
+  width: 50px; }
+
+#location {
+  width:150px;
+}
+
+
+
+
