@@ -1,66 +1,81 @@
-var DonutShop = function (loca, minPerHour, maxPerHour, avePerCust) {
+window.onload = function () {
+  var DonutShop = function (loca, minPerHour, maxPerHour, avePerCust) {
   this.loca       = loca;
   this.minPerHour = minPerHour;
   this.maxPerHour = maxPerHour;
   this.avePerCust = avePerCust;
-}
 
-DonutShop.prototype.generateRandom = function(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-//to calculate number of donuts to make per Hour
-DonutShop.prototype.donutsPerHour = function() {
-  return parseInt((this.generateRandom(this.minPerHour, this.maxPerHour) * this.avePerCust))
-}
-
-//to calculate number of donuts per day
-DonutShop.prototype.donutsPerDay = function() {
-  var open = 7;
-  var close = 6 + 12;
-  var total = 0;
-
-  for (var i = 0; i <= (close - open); i++) {
-    total += this.donutsPerHour();
+  this.open = 7;
+  this.close = 6 + 12;
   }
-  return total;
-}
 
-DonutShop.prototype.render = function() {
-  var totalPerDay = 0;
-  //to make table data per each hr
-  for (i = 0; i <= 11; i++) {
-    var td = document.createElement('td');
-    var position = document.getElementById(this.loca);
-    position.appendChild(td);
-    //calculates the number of donuts per day from the hrs above
-    var dPerHr = this.donutsPerHour();
-    totalPerDay += dPerHr;
-    var perHr = document.createTextNode(dPerHr);
-    td.appendChild(perHr);
+  DonutShop.prototype.generateRandom = function(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
   }
-  //to make table data for total per day
-  var td = document.createElement('td');
-  var position = document.getElementById(this.loca);
-  position.appendChild(td);
-  var perDay = document.createTextNode(totalPerDay);
-  td.appendChild(perDay);
-}
 
-var downtown = new DonutShop('downtown',8,43,4.5);
-var capitolHill = new DonutShop('cap-hill',4,37,2);
-var southLakeUnion = new DonutShop('slu',9,23,6.33);
-var wedgewood = new DonutShop('wedgewood',2,28,1.25);
-var ballard = new DonutShop('ballard',8,58,3.75);
+  DonutShop.prototype.operationHours = function() {
+    return (this.close - this.open);
+  }
 
-downtown.render();
-capitolHill.render();
-southLakeUnion.render();
-wedgewood.render();
-ballard.render();
+  //to calculate number of donuts to make per Hour
+  DonutShop.prototype.donutsPerHour = function() {
+    return parseInt((this.generateRandom(this.minPerHour, this.maxPerHour) * this.avePerCust))
+  }
 
-//console.log(downtown.donutsPerDay());
-//console.log(capitolHill.donutsPerDay());
-//console.log(southLakeUnion.donutsPerDay());
-//console.log(wedgewood.donutsPerDay());
-//console.log(ballard.donutsPerDay());
+  DonutShop.prototype.render = function() {
+    var totalPerDay, table, tr, td, newText, perDay, position, dPerHr, perHr;
+    totalPerDay = 0;
+    //creates Location Names
+    table       = document.getElementById('donut-table');
+    tr          = document.createElement('tr');
+    td          = document.createElement('td');
+    newText     = document.createTextNode(this.loca);
+    td.appendChild(newText);
+    tr.appendChild(td);
+
+    //to make table and data per each hr
+    for (i = 0; i <= this.operationHours(); i++) {
+      dPerHr = this.donutsPerHour();
+      td = document.createElement('td');
+      newText = document.createTextNode(dPerHr);
+      td.appendChild(newText);
+      tr.appendChild(td);
+      //calculates the number of donuts per day from the hrs above
+      totalPerDay += dPerHr;
+    }
+
+    //to make table data for total per day
+    td = document.createElement('td');
+    perDay = document.createTextNode(totalPerDay);
+    td.appendChild(perDay);
+    tr.appendChild(td);
+    table.appendChild(tr);
+  }
+
+  var locations = [];
+  locations.push(new DonutShop('Downtown',8,43,4.5));
+  locations.push(new DonutShop('Capitol Hill',4,37,2));
+  locations.push(new DonutShop('South Lake Union',9,23,6.33));
+  locations.push(new DonutShop('Wedgewood',2,28,1.25));
+  locations.push(new DonutShop('Ballard',8,58,3.75));
+
+  for (var j = 0; j < locations.length; j++) {
+    locations[j].render();
+  };
+
+  var NewDonutShop = function() {
+
+    var newlocation, newMin, newMax, newAve, newLocationObject;
+    newlocation = document.getElementById('location').value;
+    newMin = parseInt(document.getElementById('min-cust').value);
+    newMax = parseInt(document.getElementById('max-cust').value);
+    newAve = parseInt(document.getElementById('ave-purch').value);
+    newLocationObject = new DonutShop(newlocation,newMin,newMax,newAve);
+    locations.push(newLocationObject);
+    newLocationObject.render();
+  }
+
+document.getElementById("submit-button").addEventListener('click', NewDonutShop);
+
+};
+
