@@ -1,24 +1,33 @@
 body {
-  background-color: #E2F2C6; }
+  background-color: #005C5C;
+  color: #C0C0C0;
+  font-family: 'Fontdiner Swanky', cursive; }
 
 h1 {
-  font-family: 'Fontdiner Swanky', cursive;
-  color: #91CCAD;
+  font-family: 'Vast Shadow', cursive;;
+  color: #4EAE47;
   text-align: center;
-  font-size: 2.2em; }
+  text-transform: uppercase;
+  font-size: 3.2em; }
 
 h2 {
-  text-align: center; }
+  color: #0C2C56;
+  text-align: center;
+  text-transform: uppercase;
+ }
 
 p {
   margin-left: auto;
   margin-right: auto;
   text-align: justify;
-  width: 400px;}
+  width: 400px; }
 
 table {
   margin-right: auto;
   margin-left: auto; }
+
+.new-location-input {
+  text-align: center; }
 
 tr:nth-child(even) {
   background-color: #85DB18;
@@ -32,16 +41,25 @@ tr:hover {
   background-color: #FFE11A;
   color: #041F3D; }
 
-input{
-background-color: #FFE11A; }
+input {
+  background-color: #FFE11A; }
+
+input:focus {
+  background-color:#041F3D;
+  color: #85DB18; }
 
 #submit-button {
-background-color: #91CCAD;
-color:#041F3D; }
+background-color: #85DB18;
+color:#041F3D;
+border-radius: 25px; }
 
 #submit-button:hover {
   background-color:#041F3D;
   color: #91CCAD; }
+
+#submit-button:active {
+  background-color: #FFE11A;
+  color: #041F3D;}
 
 .input-header{
   width: 50px; }

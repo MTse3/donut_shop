@@ -62,9 +62,8 @@ window.onload = function () {
   for (var j = 0; j < locations.length; j++) {
     locations[j].render();
   };
-
-  var NewDonutShop = function() {
-
+  //takes input from forms and adds the event so user can click submit
+  document.getElementById("submit-button").addEventListener('click', function(e) {
     var newlocation, newMin, newMax, newAve, newLocationObject;
     newlocation = document.getElementById('location').value;
     newMin = parseInt(document.getElementById('min-cust').value);
@@ -73,9 +72,8 @@ window.onload = function () {
     newLocationObject = new DonutShop(newlocation,newMin,newMax,newAve);
     locations.push(newLocationObject);
     newLocationObject.render();
-  }
-
-document.getElementById("submit-button").addEventListener('click', NewDonutShop);
+    e.preventDefault();//avoids refresh after clicking button
+  });
 
 };
 
