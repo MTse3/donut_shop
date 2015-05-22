@@ -9,15 +9,17 @@
     <script language="javascript" type="text/javascript" src="top-pot.js"></script>
     <link rel="stylesheet" type="text/css" href="styles.css"/>
     <link href='http://fonts.googleapis.com/css?family=Fontdiner+Swanky|Vast+Shadow' rel='stylesheet' type='text/css'>
-    <img href =
   </head>
   <body>
     <section>
       <h1>Top Pot Donut Projections</h1>
+      <img class="logo"src="http://www.thriftynorthwestmom.com/wp-content/uploads/2014/02/Screen-Shot-2014-02-04-at-2.56.30-PM.png" alt="Top Pot coffee advertisment"/>
       <h2>Description</h2>
       <p>
         The table below projects the number of donuts needed per a given hour from 7:00 AM to 6:00 PM. These projections are for the franchises located in Downtown, Capitol Hill, South Lake Union, Wedgewood, and Ballard. A total is also given for the total number of donuts needed for the day.
       </p>
+      <h2>New Location</h2>
+      <p>Want to add a new location to the table? Input data in the forms at the bottom of the screen.</p>
     </section>
     <section>
       <h2>Projections</h2>
@@ -41,16 +43,22 @@
       </table>
     </section>
     <section>
-      <h2>New Location</h2>
-      <p>Want to add a new location to the table? Input data below</p>
       <form class="new-location-input">
-        <label>Location Name:<input class="input-header" id="location" type="text" placeholder="example: bellevue"></label>
+        <label>Location Name:<input id="location" type="text" placeholder="example: bellevue"></label>
         <label>Minimum Customers Per Hour:<input class="input-header" id="min-cust" type="number" placeholder="#"></label>
         <label>Maximum Customers Per Hour:<input class="input-header" id="max-cust" type="number" placeholder="#"></label>
         <label>Average donuts purchased per customer:<input class="input-header" id="ave-purch" type="number" placeholder="#"></label>
-        <button id="submit-button">Submit</button>
+        <button id="submit-button" class="submit">Submit</button>
       </form>
     </section>
+    <aside class="other-links">
+      <p>
+        <a href="http://www.toppotdoughnuts.com/">Go to Top Pot!</a>
+      </p>
+      <p>
+        <a href="http://www.seahawks.com/">Go Hawks!</a></li>
+      </p>
+    </aside>
   </body>
   <script language="javascript" type="text/javascript" src="top-pot.js"></script>
 </html>
