@@ -5,5 +5,6 @@ After logging on to the table how many donuts are needed per a given hour, a tot
 All Top Pot Donut locatons were expected to be open from 7AM to 6PM.
 5-19: Added ability to input data for a new location and populate the table with random projections
 5-20 Added CSS and color with Alex
+5-21 Used more CSS to add better color and faded advertisment image
 
 Worked with Kalani and Marcel, also help from Nick, and David.

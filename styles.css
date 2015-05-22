@@ -1,7 +1,19 @@
+* { /*sizes boxes to avoid adding issues with padding and border */
+  box-sizing: border-box;
+}
 body {
-  background-color: #005C5C;
+  background: #005c5c; /* Old browsers */
+  background: -moz-linear-gradient(top,  #005c5c 33%, #69be28 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(33%,#005c5c), color-stop(100%,#69be28)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #005c5c 33%,#69be28 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #005c5c 33%,#69be28 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #005c5c 33%,#69be28 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #005c5c 33%,#69be28 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#005c5c', endColorstr='#69be28',GradientType=0 ); /* IE6-9 */
   color: #C0C0C0;
-  font-family: 'Fontdiner Swanky', cursive; }
+  font-family: 'Fontdiner Swanky', cursive;
+  background-image: url(https://pbs.twimg.com/profile_images/437618776452759552/MnADNZ8h.jpeg) no-repeat top right;
+   }
 
 h1 {
   font-family: 'Vast Shadow', cursive;;
@@ -13,24 +25,38 @@ h1 {
 h2 {
   color: #0C2C56;
   text-align: center;
-  text-transform: uppercase;
- }
+  text-transform: uppercase; }
 
 p {
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   text-align: justify;
-  width: 400px; }
+  width: 425px; }
+
+.other-links{
+  position: relative;
+  top:-270px;
+  left: 500px; }
+
+.logo {
+  position:absolute;
+  top:50px;
+  margin-left: 1100px;
+  opacity: .2; }
 
 table {
-  margin-right: auto;
-  margin-left: auto; }
+  margin:0 auto; }
 
 .new-location-input {
-  text-align: center; }
+  position: fixed;
+  text-align: center;
+  bottom: 0px;
+  left: 5px;
+  right: 5px;
+  margin: 0px 15px 0px 15px;
+  background-color: #005C5C; }
 
 tr:nth-child(even) {
-  background-color: #85DB18;
+  background-color: #C0C0C0;
   color: #041F3D; }
 
 tr:nth-child(odd) {
@@ -39,7 +65,9 @@ tr:nth-child(odd) {
 
 tr:hover {
   background-color: #FFE11A;
-  color: #041F3D; }
+  color: #041F3D;
+  font-size: 120%;
+  width: 150%; }
 
 input {
   background-color: #FFE11A; }
@@ -48,26 +76,23 @@ input:focus {
   background-color:#041F3D;
   color: #85DB18; }
 
-#submit-button {
+.submit {
 background-color: #85DB18;
 color:#041F3D;
-border-radius: 25px; }
+border-radius: 25px;
+padding: 5px;
+font-size: 20px; }
 
-#submit-button:hover {
+.submit:hover {
   background-color:#041F3D;
   color: #91CCAD; }
 
-#submit-button:active {
+.submit:active {
   background-color: #FFE11A;
   color: #041F3D;}
 
-.input-header{
+.input-header {
   width: 50px; }
 
 #location {
-  width:150px;
-}
-
-
-
-
+  width:150px; }
