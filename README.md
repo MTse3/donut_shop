@@ -6,5 +6,6 @@ All Top Pot Donut locatons were expected to be open from 7AM to 6PM.
 5-19: Added ability to input data for a new location and populate the table with random projections
 5-20 Added CSS and color with Alex
 5-21 Used more CSS to add better color and faded advertisment image
+5-22 Added pictures to links, transformed button, made table and input slots get larger as one hovered over.
 
 Worked with Kalani and Marcel, also help from Nick, and David.
